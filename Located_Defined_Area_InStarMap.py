@@ -67,6 +67,7 @@ print("Located_Small_Area[Row,Column]:",Located_Small_Area[0:4])
 Located_Small_area_rotated=local_histogram_statistics(StarMap,Small_area_rotated,X)
 angle=1
 while len(Located_Small_area_rotated)==0 and angle!=360:
+    Small_area_rotated=cv2.imread("./brief/Small_area_rotated.png",0)
     Small_area_rotated=rotate_bound(Small_area_rotated,angle)
     angle+=1
     Located_Small_area_rotated=local_histogram_statistics(StarMap,Small_area_rotated,X)
